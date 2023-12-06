@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+.container {
+    
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+
+}
+.content {
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+
+}
+.bg{
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+
+}
+.btn{
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+
+}
+.bt {
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+
+}

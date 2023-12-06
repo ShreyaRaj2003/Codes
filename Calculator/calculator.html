@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>build calsi</title>
+    <!--  <link rel="stylesheet" href="calculator.css"> -->
+    <style>
+
+              body {
+          background-color: black;
+
+        }
+         
+
+      section {
+        /* width: 330px;
+        height: 610px; */
+        /* border: 2px solid black; */
+        position: relative;
+        left: 496px;
+
+        
+       
+      }
+      /* body {
+    /* background-color: black; */
+/* }  */
+
+
+#id1 {
+  width: 182px;
+  border-radius: 50%;
+  /* border: 2px solid black; */
+
+
+}
+#id2 , #eight {
+  height: 80px;
+  width: 80px;
+
+}
+input {
+  height: 170px;
+  width: 390px;
+  font-size: 4em;
+  background-color: black;
+  color: white;
+  /* cursor: right; */
+
+  
+}
+    .cd {
+  background-color: yellow;
+}
+.b{
+  height: 80px;
+  width: 80px;
+}
+
+.b{
+  margin: 6px 11px;
+  padding: 21px 25px;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.container {
+  
+    display: flex;
+    margin: auto;
+    
+   /* background-color: yellow; */
+
+}
+.content {
+    /* border-radius: 100%; */
+    display: flex;
+    /* margin: auto; */
+
+}
+.bg{
+    border-radius: 100%;
+    display: flex;
+    /* margin: auto; */
+
+}
+.btn{
+    border-radius: 100%;
+    display: flex;
+    /* margin: auto; */
+
+}
+.bt {
+    border-radius: 100%;
+    display: flex;
+    /* font-weight: bolder; */
+    /* margin: auto; */
+
+}
+#one , #two , #three , #four , #five , #six , #seven , #eight{
+  background-color: yellow;
+}
+#id1 , #id2 {
+  background-color: rgb(230, 20, 52);
+}
+button:hover {
+  background-color: cornflowerblue;
+  /* height:100px;
+  width: 100px; */
+}
+#one:hover , #two:hover, #three:hover , #four:hover, #five:hover , #six:hover , #seven:hover , #eight:hover{
+  background-color: red;
+}
+#id1:hover , #id2:hover {
+  background-color: yellow;
+}
+
+    </style>
+</head>
+<body>
+  <section>
+
+  <input>
+  
+    <div class="container">
+      
+      <div><button class="b" id="one"><b>C</b></button></div>
+      <div><button class="b"  id="two"><b>**</b></button></div>
+      <div><button class="b" id="three"><b>%</b></button></div>
+      <div><button class="b" id="four"><b>/</b></button></div>
+
+    </div>
+    <div class="content">
+      <div><button  class="b" ><b>7</b></button></div>
+      <div><button class="b" ><b>8</b></button></div>
+      <div><button class="b" ><b>9</b></button></div>
+      <div><button class="b" id="five" ><b>*</b></button></div>
+
+    </div>
+    <div class="bg">
+      <div><button class="b" ><b>4</b></button></div>
+      <div><button class="b" ><b>5</b></button></div>
+      <div><button class="b" ><b>6</b></button></div>
+      <div><button class="b" id="six" ><b>-</b></button></div>
+
+    </div>
+    <div class="btn">
+      <div><button class="b"><b>1</b></button></div>
+      <div><button class="b"><b>2</b></button></div>
+      <div><button class="b"><b>3</b> </button></div>
+      <div><button class="b" id="seven"><b>+</b></button></div>
+
+    </div>
+    <div class="bt">
+      <div><button class="b" id="id1" ><b>0</b></button></div>
+     
+      <div><button class="b" id="id2"><b>.</b></button></div>
+      <div><button class="b" id="eight"><b>=</b></button></div>
+
+    </section>
+      
+
+    </div>
+
+    <script>
+      let inp = document.querySelector('input');
+      let btnn = document.querySelectorAll('button');
+       for(let item of btnn){
+        item.addEventListener('click' , function(e) {
+         let t  =  e.target.innerText ;
+          // console.log(inp);
+        
+     
+        if(t==='C'){
+          inp.value = '';
+
+        }
+         else if(t==='='){
+          inp.value = eval(inp.value);
+        }
+
+    //      try{
+    //   inp.value = eval(inp.value);
+    // }
+    // catch(e){
+    //   inp.value = 'invalid';
+    // }
+    
+        
+        else {
+          inp.value+=t;
+        }
+
+      })
+    } 
+   
+
+         
+
+        
+
+    </script>
+</body>
+</html>
